@@ -1,0 +1,380 @@
+[
+  {
+    "infinitive": "be",
+    "pastSimple": "was/were",
+    "pastParticiple": "been",
+    "translate": "бути"
+  },
+  {
+    "infinitive": "become",
+    "pastSimple": "became",
+    "pastParticiple": "become",
+    "translate": "ставати"
+  },
+  {
+    "infinitive": "begin",
+    "pastSimple": "began",
+    "pastParticiple": "begun",
+    "translate": "починати"
+  },
+  {
+    "infinitive": "break",
+    "pastSimple": "broke",
+    "pastParticiple": "broken",
+    "translate": "ламати"
+  },
+  {
+    "infinitive": "bring",
+    "pastSimple": "brought",
+    "pastParticiple": "brought",
+    "translate": "приносити"
+  },
+  {
+    "infinitive": "build",
+    "pastSimple": "built",
+    "pastParticiple": "built",
+    "translate": "будувати"
+  },
+  {
+    "infinitive": "buy",
+    "pastSimple": "bought",
+    "pastParticiple": "bought",
+    "translate": "купувати"
+  },
+  {
+    "infinitive": "can",
+    "pastSimple": "could",
+    "pastParticiple": "been able",
+    "translate": "могти"
+  },
+  {
+    "infinitive": "catch",
+    "pastSimple": "caught",
+    "pastParticiple": "caught",
+    "translate": "ловити"
+  },
+  {
+    "infinitive": "choose",
+    "pastSimple": "chose",
+    "pastParticiple": "chosen",
+    "translate": "вибирати"
+  },
+  {
+    "infinitive": "come",
+    "pastSimple": "came",
+    "pastParticiple": "come",
+    "translate": "приходити"
+  },
+  {
+    "infinitive": "cost",
+    "pastSimple": "cost",
+    "pastParticiple": "cost",
+    "translate": "коштувати"
+  },
+  {
+    "infinitive": "cut",
+    "pastSimple": "cut",
+    "pastParticiple": "cut",
+    "translate": "вирізати"
+  },
+  {
+    "infinitive": "do",
+    "pastSimple": "did",
+    "pastParticiple": "done",
+    "translate": "робити"
+  },
+  {
+    "infinitive": "drink",
+    "pastSimple": "drank",
+    "pastParticiple": "drunk",
+    "translate": "пити"
+  },
+  {
+    "infinitive": "drive",
+    "pastSimple": "drove",
+    "pastParticiple": "driven",
+    "translate": "їздити"
+  },
+  {
+    "infinitive": "eat",
+    "pastSimple": "ate",
+    "pastParticiple": "eaten",
+    "translate": "їсти"
+  },
+  {
+    "infinitive": "fall",
+    "pastSimple": "fell",
+    "pastParticiple": "fallen",
+    "translate": "падати"
+  },
+  {
+    "infinitive": "feel",
+    "pastSimple": "felt",
+    "pastParticiple": "felt",
+    "translate": "відчувати"
+  },
+  {
+    "infinitive": "fight",
+    "pastSimple": "fought",
+    "pastParticiple": "fought",
+    "translate": "боротися"
+  },
+  {
+    "infinitive": "find",
+    "pastSimple": "found",
+    "pastParticiple": "found",
+    "translate": "знаходити"
+  },
+  {
+    "infinitive": "fly",
+    "pastSimple": "flew",
+    "pastParticiple": "flown",
+    "translate": "літати"
+  },
+  {
+    "infinitive": "forget",
+    "pastSimple": "forgot",
+    "pastParticiple": "forgotten",
+    "translate": "забувати"
+  },
+  {
+    "infinitive": "get",
+    "pastSimple": "got",
+    "pastParticiple": "got",
+    "translate": "отримувати"
+  },
+  {
+    "infinitive": "give",
+    "pastSimple": "gave",
+    "pastParticiple": "given",
+    "translate": "давати"
+  },
+  {
+    "infinitive": "go",
+    "pastSimple": "went",
+    "pastParticiple": "gone",
+    "translate": "йти"
+  },
+  {
+    "infinitive": "grow",
+    "pastSimple": "grew",
+    "pastParticiple": "grown",
+    "translate": "рости"
+  },
+  {
+    "infinitive": "have",
+    "pastSimple": "had",
+    "pastParticiple": "had",
+    "translate": "мати"
+  },
+  {
+    "infinitive": "hear",
+    "pastSimple": "heard",
+    "pastParticiple": "heard",
+    "translate": "чути"
+  },
+  {
+    "infinitive": "hit",
+    "pastSimple": "hit",
+    "pastParticiple": "hit",
+    "translate": "бити"
+  },
+  {
+    "infinitive": "keep",
+    "pastSimple": "kept",
+    "pastParticiple": "kept",
+    "translate": "тримати"
+  },
+  {
+    "infinitive": "know",
+    "pastSimple": "knew",
+    "pastParticiple": "known",
+    "translate": "знати"
+  },
+  {
+    "infinitive": "learn",
+    "pastSimple": "learnt",
+    "pastParticiple": "learnt",
+    "translate": "вивчати"
+  },
+  {
+    "infinitive": "leave",
+    "pastSimple": "left",
+    "pastParticiple": "left",
+    "translate": "залишати"
+  },
+  {
+    "infinitive": "lose",
+    "pastSimple": "lost",
+    "pastParticiple": "lost",
+    "translate": "втрачати"
+  },
+  {
+    "infinitive": "make",
+    "pastSimple": "made",
+    "pastParticiple": "made",
+    "translate": "зробити"
+  },
+  {
+    "infinitive": "meet",
+    "pastSimple": "met",
+    "pastParticiple": "met",
+    "translate": "зустрічати"
+  },
+  {
+    "infinitive": "pay",
+    "pastSimple": "paid",
+    "pastParticiple": "paid",
+    "translate": "платити"
+  },
+  {
+    "infinitive": "put",
+    "pastSimple": "put",
+    "pastParticiple": "put",
+    "translate": "класти"
+  },
+  {
+    "infinitive": "read",
+    "pastSimple": "read",
+    "pastParticiple": "read",
+    "translate": "читати"
+  },
+  {
+    "infinitive": "ride",
+    "pastSimple": "rode",
+    "pastParticiple": "ridden",
+    "translate": "їздити"
+  },
+  {
+    "infinitive": "run",
+    "pastSimple": "ran",
+    "pastParticiple": "run",
+    "translate": "бігти"
+  },
+  {
+    "infinitive": "say",
+    "pastSimple": "said",
+    "pastParticiple": "said",
+    "translate": "сказати"
+  },
+  {
+    "infinitive": "see",
+    "pastSimple": "saw",
+    "pastParticiple": "seen",
+    "translate": "бачити"
+  },
+  {
+    "infinitive": "sell",
+    "pastSimple": "sold",
+    "pastParticiple": "sold",
+    "translate": "продавати"
+  },
+  {
+    "infinitive": "send",
+    "pastSimple": "sent",
+    "pastParticiple": "sent",
+    "translate": "відправляти"
+  },
+  {
+    "infinitive": "shut",
+    "pastSimple": "shut",
+    "pastParticiple": "shut",
+    "translate": "закривати"
+  },
+  {
+    "infinitive": "sing",
+    "pastSimple": "sang",
+    "pastParticiple": "sung",
+    "translate": "співати"
+  },
+  {
+    "infinitive": "sit",
+    "pastSimple": "sat",
+    "pastParticiple": "sat",
+    "translate": "сидіти"
+  },
+  {
+    "infinitive": "sleep",
+    "pastSimple": "slept",
+    "pastParticiple": "slept",
+    "translate": "спати"
+  },
+  {
+    "infinitive": "speak",
+    "pastSimple": "spoke",
+    "pastParticiple": "spoken",
+    "translate": "говорити"
+  },
+  {
+    "infinitive": "spend",
+    "pastSimple": "spent",
+    "pastParticiple": "spent",
+    "translate": "витрачати, проводити час"
+  },
+  {
+    "infinitive": "stand",
+    "pastSimple": "stood",
+    "pastParticiple": "stood",
+    "translate": "стояти"
+  },
+  {
+    "infinitive": "steal",
+    "pastSimple": "stole",
+    "pastParticiple": "stolen",
+    "translate": "красти"
+  },
+  {
+    "infinitive": "swim",
+    "pastSimple": "swam",
+    "pastParticiple": "swum",
+    "translate": "плавати"
+  },
+  {
+    "infinitive": "take",
+    "pastSimple": "took",
+    "pastParticiple": "taken",
+    "translate": "брати"
+  },
+  {
+    "infinitive": "tell",
+    "pastSimple": "told",
+    "pastParticiple": "told",
+    "translate": "розповідати"
+  },
+  {
+    "infinitive": "think",
+    "pastSimple": "thought",
+    "pastParticiple": "thought",
+    "translate": "думати"
+  },
+  {
+    "infinitive": "understand",
+    "pastSimple": "understood",
+    "pastParticiple": "understood",
+    "translate": "розуміти"
+  },
+  {
+    "infinitive": "wake",
+    "pastSimple": "woke",
+    "pastParticiple": "woken",
+    "translate": "прокидатися"
+  },
+  {
+    "infinitive": "wear",
+    "pastSimple": "wore",
+    "pastParticiple": "worn",
+    "translate": "носити"
+  },
+  {
+    "infinitive": "win",
+    "pastSimple": "won",
+    "pastParticiple": "won",
+    "translate": "перемагати"
+  },
+  {
+    "infinitive": "write",
+    "pastSimple": "wrote",
+    "pastParticiple": "written",
+    "translate": "писати"
+  }
+]
