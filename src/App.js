@@ -11,7 +11,8 @@ class App extends React.Component {
         element: [...out][Math.floor(Math.random() * [...out].length)],
         counter: 0,
         rightCounter: 0,
-        lastRightAnswer: ''
+        lastRightAnswer: '',
+        lastAnswerIsRight: false
     };
 
     inputRef = React.createRef();
@@ -19,9 +20,14 @@ class App extends React.Component {
     handlerCheckClick = () => {
         const input = this.inputRef.current;
         const value = input.value;
-        if (value === this.state.element.pastSimple) {
+        if (value.toUpperCase() === this.state.element.pastSimple.toUpperCase()) {
             this.setState((state, props) => ({
-                rightCounter: state.rightCounter + 1
+                rightCounter: state.rightCounter + 1,
+                lastAnswerIsRight: true
+            }));
+        } else {
+            this.setState((state, props) => ({
+                lastAnswerIsRight: false
             }));
         }
         let newElement = this.getNewElement();
@@ -56,7 +62,7 @@ class App extends React.Component {
                     </FormGroup>
                 </Form>
                 <Button onClick={this.handlerCheckClick}>Check</Button>
-                <h4>{this.state.lastRightAnswer}</h4>
+                <h4 className={this.state.lastAnswerIsRight ? 'right' : 'wrong'}>{this.state.lastRightAnswer}</h4>
             </Container>
         );
     }
