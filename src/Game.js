@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
-import {Button, Form, FormControl, FormGroup} from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.css';
 import out from './output.json';
+import './Game.css';
 
 class Game extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.myRef = React.createRef()   // Create a ref object
+    }
 
     state = {
         arr: [...out],
@@ -36,6 +40,7 @@ class Game extends React.Component {
             lastRightAnswer: state.element.pastSimple,
             element: newElement,
         }));
+        this.scrollToMyRef();
         input.value = '';
     };
 
@@ -49,20 +54,20 @@ class Game extends React.Component {
         this.handlerCheckClick();
     };
 
+    scrollToMyRef = () => window.scrollTo(0, this.myRef.current.offsetTop);
+
     render() {
         return (
             <section className={"game"}>
                 <h2>Word: {this.state.element.infinitive}</h2>
                 <h4>Answers (right/all): {this.state.rightCounter}/{this.state.counter}</h4>
-                <Form onSubmit={this.submit}>
-                    <FormGroup>
-                        <FormControl type="text" placeholder="Past Simple" ref={this.inputRef}>
+                <form onSubmit={this.submit}>
+                    <input type="text" placeholder="Past Simple" ref={this.inputRef}>
 
-                        </FormControl>
-                    </FormGroup>
-                </Form>
-                <Button onClick={this.handlerCheckClick}>Check</Button>
-                <h4 className={this.state.lastAnswerIsRight ? 'right' : 'wrong'}>{this.state.lastRightAnswer}</h4>
+                    </input>
+                </form>
+                <button onClick={this.handlerCheckClick}>Check</button>
+                <h4 ref={this.myRef} className={`answer ${this.state.lastAnswerIsRight ? 'right' : 'wrong'}`}>{this.state.lastRightAnswer || '_'}</h4>
             </section>
         );
     }

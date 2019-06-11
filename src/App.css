@@ -1,7 +1,13 @@
 .right {
     color: forestgreen;
+    opacity: 0.8;
 }
 
 .wrong {
     color: indianred;
+    opacity: 0.8;
+}
+
+.answer {
+    font-size: 1.5em;
 }
