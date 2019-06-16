@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("http://pixelartmaker.com/art/1c172d231cf4933.png");
+  background-size: 196px;
 }
 
 code {

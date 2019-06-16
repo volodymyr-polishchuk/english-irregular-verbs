@@ -8,7 +8,7 @@ class App extends React.Component {
 
     state = {
         arr: App.getWords(),
-        element: [...out][Math.floor(Math.random() * [...out].length)],
+        element: App.getWords()[Math.floor(Math.random() * App.getWords().length)],
         counter: 0,
         rightCounter: 0,
         lastRightAnswer: '',
@@ -24,7 +24,7 @@ class App extends React.Component {
     handlerCheckClick = () => {
         const input = this.inputRef.current;
         const value = input.value;
-        if (value.toUpperCase().trim() === this.state.element.pastSimple.toUpperCase()) {
+        if (this.isRight(value)) {
             this.rightAnswer();
         } else {
             this.wrongAsnwer();
@@ -37,6 +37,12 @@ class App extends React.Component {
         }));
         input.value = '';
     };
+
+    isRight(value) {
+        let cleanAnswer = value.toUpperCase().trim();
+        cleanAnswer = cleanAnswer.replace(/(\/| {3}| {2}| |\||\\|, )/g, '/');
+        return cleanAnswer === this.state.element.pastSimple.toUpperCase();
+    }
 
     wrongAsnwer() {
         this.setState((state, props) => ({
@@ -65,8 +71,9 @@ class App extends React.Component {
         return (
             <Container>
                 <section className="header">
-                    <div className="header-answers">
-                        <h2>W: {this.state.element.infinitive}</h2>
+                    <div className="header-answers my-card">
+                        <h2 data-toggle="tooltip" data-placement="top" title="Tooltip on top">{this.state.element.infinitive}</h2>
+                        <small>{this.state.element.translate}</small>
                         <small>
                             Last&nbsp;right:&nbsp;
                             <span className={'last-right-answer ' + (this.state.lastAnswerIsRight ? 'right' : 'wrong')}>
@@ -74,9 +81,12 @@ class App extends React.Component {
                             </span>
                         </small>
                     </div>
-                    <small className="score">
+                    <small className="score my-card">
                         <span className="score-value">
-                            {this.state.rightCounter}/{this.state.counter} | {this.getScoreInPercent()}
+                            {this.state.rightCounter}/{this.state.counter}
+                        </span>
+                        <span>
+                            {this.getScoreInPercent()}
                         </span>
                         <div className="score-title">
                             score
@@ -98,7 +108,7 @@ class App extends React.Component {
 
     getScoreInPercent() {
         if (isNaN(this.state.rightCounter / this.state.counter)) {
-            return '';
+            return '--%';
         } else {
             return Math.round(this.state.rightCounter / this.state.counter * 100) + '%';
         }

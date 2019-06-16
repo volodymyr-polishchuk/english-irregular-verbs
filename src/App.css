@@ -16,7 +16,6 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -28,22 +27,26 @@
     flex-direction: column;
     font-family: "Courier New", sans-serif;
     font-weight: bold;
+    min-width: 68px;
+}
 
-    border: 4px dashed yellowgreen;
+.my-card {
+    border: 2px solid #efefef;
+    box-shadow: 3px 3px 0 0 silver;
     border-radius: 4px;
     padding: 2px 4px;
+    background-color: white;
 }
 
 .header h2 {
     margin-bottom: 0;
 }
 
-.header .header-answers small {
-    position: absolute;
-}
-
 .header .header-answers {
-    position: relative;
+    flex: 1;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
 .last-right-answer {
