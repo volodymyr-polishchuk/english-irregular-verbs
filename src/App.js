@@ -76,7 +76,7 @@ class App extends React.Component {
                     </div>
                     <small className="score">
                         <span className="score-value">
-                            {this.state.rightCounter}/{this.state.counter}
+                            {this.state.rightCounter}/{this.state.counter} | {this.getScoreInPercent()}
                         </span>
                         <div className="score-title">
                             score
@@ -94,6 +94,14 @@ class App extends React.Component {
                 {/*<Statistic showContent={true} statistics={this.state.arr}/>*/}
             </Container>
         );
+    }
+
+    getScoreInPercent() {
+        if (isNaN(this.state.rightCounter / this.state.counter)) {
+            return '';
+        } else {
+            return Math.round(this.state.rightCounter / this.state.counter * 100) + '%';
+        }
     }
 }
 
