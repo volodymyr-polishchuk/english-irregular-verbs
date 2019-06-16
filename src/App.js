@@ -7,7 +7,7 @@ import out from './output.json';
 class App extends React.Component {
 
     state = {
-        arr: [...out],
+        arr: App.getWords(),
         element: [...out][Math.floor(Math.random() * [...out].length)],
         counter: 0,
         rightCounter: 0,
@@ -15,20 +15,19 @@ class App extends React.Component {
         lastAnswerIsRight: false
     };
 
+    static getWords() {
+        return [...out].map(value => ({ ...value, counter: 0 }));
+    }
+
     inputRef = React.createRef();
 
     handlerCheckClick = () => {
         const input = this.inputRef.current;
         const value = input.value;
-        if (value.toUpperCase() === this.state.element.pastSimple.toUpperCase()) {
-            this.setState((state, props) => ({
-                rightCounter: state.rightCounter + 1,
-                lastAnswerIsRight: true
-            }));
+        if (value.toUpperCase().trim() === this.state.element.pastSimple.toUpperCase()) {
+            this.rightAnswer();
         } else {
-            this.setState((state, props) => ({
-                lastAnswerIsRight: false
-            }));
+            this.wrongAsnwer();
         }
         let newElement = this.getNewElement();
         this.setState((state, props) => ({
@@ -38,6 +37,19 @@ class App extends React.Component {
         }));
         input.value = '';
     };
+
+    wrongAsnwer() {
+        this.setState((state, props) => ({
+            lastAnswerIsRight: false
+        }));
+    }
+
+    rightAnswer() {
+        this.setState((state, props) => ({
+            rightCounter: state.rightCounter + 1,
+            lastAnswerIsRight: true,
+        }));
+    }
 
     getNewElement = () => {
         const number = Math.floor(Math.random() * this.state.arr.length);
@@ -79,6 +91,7 @@ class App extends React.Component {
                         <Button onClick={this.handlerCheckClick}>Check</Button>
                     </FormGroup>
                 </Form>
+                {/*<Statistic showContent={true} statistics={this.state.arr}/>*/}
             </Container>
         );
     }
