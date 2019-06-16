@@ -5,3 +5,47 @@
 .wrong {
     color: indianred;
 }
+
+.main-form {
+    display: flex;
+}
+
+.main-form > *:last-child {
+    margin-left: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Courier New", sans-serif;
+    font-weight: bold;
+
+    border: 4px dashed yellowgreen;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.header h2 {
+    margin-bottom: 0;
+}
+
+.header .header-answers small {
+    position: absolute;
+}
+
+.header .header-answers {
+    position: relative;
+}
+
+.last-right-answer {
+    font-weight: bold;
+}

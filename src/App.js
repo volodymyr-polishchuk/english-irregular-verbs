@@ -52,17 +52,33 @@ class App extends React.Component {
     render() {
         return (
             <Container>
-                <h2>Word: {this.state.element.infinitive}</h2>
-                <h4>Answers (right/all): {this.state.rightCounter}/{this.state.counter}</h4>
+                <section className="header">
+                    <div className="header-answers">
+                        <h2>W: {this.state.element.infinitive}</h2>
+                        <small>
+                            Last&nbsp;right:&nbsp;
+                            <span className={'last-right-answer ' + (this.state.lastAnswerIsRight ? 'right' : 'wrong')}>
+                                {this.state.lastRightAnswer}
+                            </span>
+                        </small>
+                    </div>
+                    <small className="score">
+                        <span className="score-value">
+                            {this.state.rightCounter}/{this.state.counter}
+                        </span>
+                        <div className="score-title">
+                            score
+                        </div>
+                    </small>
+                </section>
                 <Form onSubmit={this.submit}>
-                    <FormGroup>
+                    <FormGroup className="main-form">
                         <FormControl type="text" placeholder="Past Simple" ref={this.inputRef}>
 
                         </FormControl>
+                        <Button onClick={this.handlerCheckClick}>Check</Button>
                     </FormGroup>
                 </Form>
-                <Button onClick={this.handlerCheckClick}>Check</Button>
-                <h4 className={this.state.lastAnswerIsRight ? 'right' : 'wrong'}>{this.state.lastRightAnswer}</h4>
             </Container>
         );
     }
