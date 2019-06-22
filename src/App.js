@@ -12,7 +12,8 @@ class App extends React.Component {
         counter: 0,
         rightCounter: 0,
         lastRightAnswer: '',
-        lastAnswerIsRight: false
+        lastAnswerIsRight: false,
+        wrongElements: []
     };
 
     static getWords() {
@@ -27,7 +28,7 @@ class App extends React.Component {
         if (this.isRight(value)) {
             this.rightAnswer();
         } else {
-            this.wrongAsnwer();
+            this.wrongAnswer(value);
         }
         let newElement = this.getNewElement();
         this.setState((state, props) => ({
@@ -41,12 +42,15 @@ class App extends React.Component {
     isRight(value) {
         let cleanAnswer = value.toUpperCase().trim();
         cleanAnswer = cleanAnswer.replace(/(\/| {3}| {2}| |\||\\|, )/g, '/');
-        return cleanAnswer === this.state.element.pastSimple.toUpperCase();
+        const revert = cleanAnswer.split('/').reverse().join('/');
+        let formattedPastSimple = this.state.element.pastSimple.toUpperCase();
+        return cleanAnswer === formattedPastSimple || revert === formattedPastSimple;
     }
 
-    wrongAsnwer() {
+    wrongAnswer(value) {
         this.setState((state, props) => ({
-            lastAnswerIsRight: false
+            lastAnswerIsRight: false,
+            wrongElements: [value, ...state.wrongElements]
         }));
     }
 
@@ -95,12 +99,22 @@ class App extends React.Component {
                 </section>
                 <Form onSubmit={this.submit}>
                     <FormGroup className="main-form">
-                        <FormControl type="text" placeholder="Past Simple" ref={this.inputRef}>
+                        <FormControl type="text" className="my-card" placeholder="Past Simple" ref={this.inputRef}>
 
                         </FormControl>
-                        <Button onClick={this.handlerCheckClick}>Check</Button>
+                        <Button onClick={this.handlerCheckClick} className="my-card">Check</Button>
                     </FormGroup>
                 </Form>
+                <div className="my-card wrong-answers">
+                    {
+                        this.state.wrongElements
+                            .filter((value, index, array) => array.indexOf(value) === index)
+                            .map(value => (
+                                    <div key={value}>{value}</div>
+                                )
+                            )
+                    }
+                </div>
                 {/*<Statistic showContent={true} statistics={this.state.arr}/>*/}
             </Container>
         );

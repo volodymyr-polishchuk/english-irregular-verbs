@@ -52,3 +52,9 @@
 .last-right-answer {
     font-weight: bold;
 }
+
+.wrong-answers {
+    min-height: 2rem;
+    max-height: 10rem;
+    overflow-y: scroll;
+}
