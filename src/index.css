@@ -5,11 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("http://pixelartmaker.com/art/1c172d231cf4933.png");
-  background-size: 196px;
+  background-image: url("assets/background.png");
+  background-size: 76px;
+  image-rendering: pixelated;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@keyframes background-parallax {
+  from {
+    -ms-background-position-x: 0;
+    background-position-x: 0;
+  }
+  to {
+    -ms-background-position-x: 76px;
+    background-position-x: 76px;
+  }
 }

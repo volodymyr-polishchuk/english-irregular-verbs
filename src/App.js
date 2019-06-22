@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {Button, Container, Form, FormControl, FormGroup,} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
-import out from './output.json';
+import out from './data/output.json';
 
 class App extends React.Component {
 
