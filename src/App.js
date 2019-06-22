@@ -99,10 +99,10 @@ class App extends React.Component {
                 </section>
                 <Form onSubmit={this.submit}>
                     <FormGroup className="main-form">
-                        <FormControl type="text" className="my-card" placeholder="Past Simple" ref={this.inputRef}>
+                        <FormControl type="text" placeholder="Past Simple" ref={this.inputRef}>
 
                         </FormControl>
-                        <Button onClick={this.handlerCheckClick} className="my-card">Check</Button>
+                        <Button onClick={this.handlerCheckClick}>Check</Button>
                     </FormGroup>
                 </Form>
                 <div className="my-card wrong-answers">
