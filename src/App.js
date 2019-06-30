@@ -13,7 +13,13 @@ class App extends React.Component {
         rightCounter: 0,
         lastRightAnswer: '',
         lastAnswerIsRight: false,
-        wrongElements: []
+        wrongElements: [],
+        currentValue: null,
+    };
+    handleType = (event) => {
+        this.setState({
+            currentValue: event.target.value,
+        });
     };
 
     static getWords() {
@@ -99,7 +105,7 @@ class App extends React.Component {
                 </section>
                 <Form onSubmit={this.submit}>
                     <FormGroup className="main-form">
-                        <FormControl type="text" placeholder="Past Simple" ref={this.inputRef}>
+                        <FormControl type="text" placeholder="Past Simple" ref={this.inputRef} onKeyUp={this.handleType}>
 
                         </FormControl>
                         <Button onClick={this.handlerCheckClick}>Check</Button>
@@ -109,6 +115,7 @@ class App extends React.Component {
                     {
                         this.state.wrongElements
                             .filter((value, index, array) => array.indexOf(value) === index)
+                            .filter(value => value.includes(this.state.currentValue))
                             .map(value => (
                                     <div key={value}>{value}</div>
                                 )
