@@ -15,11 +15,31 @@ class App extends React.Component {
         lastAnswerIsRight: false,
         wrongElements: [],
         currentValue: null,
+        terms: {
+            name: 'Past Simple',
+            key: 'pastSimple',
+        }
     };
     handleType = (event) => {
         this.setState({
             currentValue: event.target.value,
         });
+    };
+    changeToPastSimple = (event) => {
+        this.setState({
+            terms: {
+                name: 'Past Simple',
+                key: 'pastSimple',
+            }
+        })
+    };
+    changeToPastParticiple = (event) => {
+        this.setState({
+            terms: {
+                name: 'Past Participle',
+                key: 'pastParticiple',
+            }
+        })
     };
 
     static getWords() {
@@ -39,7 +59,7 @@ class App extends React.Component {
         let newElement = this.getNewElement();
         this.setState((state, props) => ({
             counter: state.counter + 1,
-            lastRightAnswer: state.element.pastSimple,
+            lastRightAnswer: state.element[state.terms.key],
             element: newElement,
         }));
         input.value = '';
@@ -49,8 +69,8 @@ class App extends React.Component {
         let cleanAnswer = value.toUpperCase().trim();
         cleanAnswer = cleanAnswer.replace(/(\/| {3}| {2}| |\||\\|, )/g, '/');
         const revert = cleanAnswer.split('/').reverse().join('/');
-        let formattedPastSimple = this.state.element.pastSimple.toUpperCase();
-        return cleanAnswer === formattedPastSimple || revert === formattedPastSimple;
+        let formattedAswer = this.state.element[this.state.terms.key].toUpperCase();
+        return cleanAnswer === formattedAswer || revert === formattedAswer;
     }
 
     wrongAnswer(value) {
@@ -105,7 +125,7 @@ class App extends React.Component {
                 </section>
                 <Form onSubmit={this.submit}>
                     <FormGroup className="main-form">
-                        <FormControl type="text" placeholder="Past Simple" ref={this.inputRef} onKeyUp={this.handleType}>
+                        <FormControl type="text" placeholder={this.state.terms.name} ref={this.inputRef} onKeyUp={this.handleType}>
 
                         </FormControl>
                         <Button onClick={this.handlerCheckClick}>Check</Button>
@@ -121,6 +141,10 @@ class App extends React.Component {
                                 )
                             )
                     }
+                </div>
+                <div className="my-card select-for-terms">
+                    <Button onClick={this.changeToPastSimple}>Past Simple</Button>
+                    <Button onClick={this.changeToPastParticiple}>Past Participle</Button>
                 </div>
                 {/*<Statistic showContent={true} statistics={this.state.arr}/>*/}
             </Container>

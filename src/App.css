@@ -54,7 +54,14 @@
 }
 
 .wrong-answers {
-    min-height: 2rem;
-    max-height: 10rem;
+    min-height: 5rem;
+    max-height: 5rem;
     overflow-y: scroll;
+}
+
+.select-for-terms {
+    margin-top: 8px;
+    display: grid;
+    grid-template: 1fr 1fr / auto;
+    grid-row-gap: 4px;
 }
